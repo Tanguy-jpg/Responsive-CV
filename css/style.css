@@ -12,7 +12,7 @@ body{
 html {
     scroll-behavior: smooth;
   }
-  
+
 /* ------------------------- effet paralax -------------------------------*/
 #paralax{
     position: relative;
@@ -112,6 +112,12 @@ h1{
     height: 50%;
     width: 25%;
     background:red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#3F403F;
+    font-weight: 900;
+    font-size: 5vh;
 }
 
 #c1{
