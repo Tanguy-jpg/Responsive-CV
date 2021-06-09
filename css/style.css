@@ -95,6 +95,7 @@ nav{
 }
 h1{
     min-width: 130px;
+    transition: 0.3s;
 }
 
 .container{
@@ -112,6 +113,11 @@ h1{
 .container>p{
     font-size: 5vh;
     cursor: default;
+}
+
+nav>h1:hover{
+    font-size:2.7vh;
+    transition: 0.3s;
 }
 
 #logo{
@@ -154,6 +160,58 @@ h1{
 }
 #c3{
     background: #FFE066;
+}
+
+#c1:before{
+    content: 'test !';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 90%;
+    width:90%;
+    background:#242423 ;
+    opacity: 0%;
+    transition: 0.4s;
+}
+
+#c1:hover:before{
+    opacity:100%;
+    transition: 0.4s;
+}
+#c2:before{
+    content: 'test !';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 90%;
+    width:90%;
+    background:#242423 ;
+    opacity: 0%;
+    transition: 0.4s;
+}
+
+#c2:hover:before{
+    opacity:100%;
+    transition: 0.4s;
+}
+#c3:before{
+    content: 'test !';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 90%;
+    width:90%;
+    background:#242423 ;
+    opacity: 0%;
+    transition: 0.4s;
+}
+
+#c3:hover:before{
+    opacity:100%;
+    transition: 0.4s;
 }
 
 /* Traits en haut et en bas qui bougent */
@@ -214,6 +272,16 @@ h1{
 }
 .t3{
     background: #D9F7FA;
+}
+.t1:hover{
+    background: #aa423b;
+}
+
+.t2:hover{
+    background: #d1b854;
+}
+.t3:hover{
+    background: #a0b6b8;
 }
 
 /*footer*/
