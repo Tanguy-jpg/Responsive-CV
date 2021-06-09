@@ -11,5 +11,5 @@ window.addEventListener("scroll", function(){
     violon.style.left = value * 1 +"px";
     violon.style.top = value * -2 + "px";
 
-    nav.style.opacity = value * 0.12 + "%";
+    nav.style.opacity = value * 0.2 + "%";
 })

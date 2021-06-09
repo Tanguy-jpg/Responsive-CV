@@ -13,6 +13,24 @@ html {
     scroll-behavior: smooth;
   }
 
+/*/   Disable scrollbar /*/
+
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+html{
+    scrollbar-width: none;
+}
+}
+body {
+margin: 0; /* remove default margin */
+scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+-ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+width: 0px;
+background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+
 /* ------------------------- effet paralax -------------------------------*/
 #paralax{
     position: relative;
@@ -121,6 +139,13 @@ h1{
     cursor: pointer;
 }
 
+.case-h{
+    position: absolute;
+    background: white;
+    height: 50%;
+    width: 50%;
+}
+
 #c1{
     background: #FE5F55;
 }
@@ -204,6 +229,7 @@ footer{
     justify-content: center;
     color: #FFE066;
     cursor: default;
+    font-size: 2vh;
 }
 
 /* ------------------- Responsive ----------------------*/
@@ -221,10 +247,21 @@ footer{
         width: 98%;
     }
 }
-/* navbar à transformer 
+/* navbar à transformer */
 @media(max-width:800px){
+    #logo, .container>p{
+        display: none;
+    }
 
+    footer{
+        font-size:1vh;
+    }
+
+    nav{
+        font-size: 1vh;
+    }
 }
-*/
+
+
 
 
