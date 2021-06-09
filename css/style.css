@@ -4,7 +4,7 @@
 }
 
 body{
-    background:#D9F7FA;
+    background:#3F403F;
     min-height: 200vh;
     color:rgb(255, 255, 255);
     font-family: 'Rokkitt', serif;
@@ -159,7 +159,7 @@ h1{
 }
 
 #c1:before{
-    content: 'test !';
+    content: 'HTML5, CSS3, JavaScript, Photoshop, Illustrator, SonyVegasPro, PHP, WorldPress';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,7 +176,7 @@ h1{
     transition: 0.4s;
 }
 #c2:before{
-    content: 'test !';
+    content: '404 page not found';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,10 +193,10 @@ h1{
     transition: 0.4s;
 }
 #c3:before{
-    content: 'test !';
+    content: 'DWWM, WorldPress, Graphist, WebDesign';
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:flex-start;
     position: absolute;
     height: 90%;
     width:90%;
