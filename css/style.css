@@ -9,7 +9,7 @@ body{
     color:rgb(255, 255, 255);
     font-family: 'Rokkitt', serif;
 }
-/* effet paralax */
+/* ------------------------- effet paralax -------------------------------*/
 #paralax{
     position: relative;
     width: 100%;
@@ -19,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     background: rgb(63,64,63);
-    background: linear-gradient(180deg, rgba(63,64,63,1) 0%, rgba(36,36,35,1) 100%); 
+    background: linear-gradient(180deg, rgba(36,36,35,1) 100% ,  rgba(63,64,63,1) 0%); 
 }
 
 #paralax img{
@@ -44,7 +44,7 @@ body{
 #manette, #violon{
     animation: levitate 2s ease-in-out infinite  ;
 }
-/* PAGE ACCUEIL */
+/* --------------------------------------- PAGE ACCUEIL ------------------------------------ */
 
 #page{
     position: relative;
@@ -52,7 +52,7 @@ body{
     height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background: #3F403F;
 }
@@ -82,10 +82,14 @@ h1{
     align-items: center;
     justify-content: end;
     gap:5vh;
-    font-size: 2.5vh;
+    font-size: 2.5vh; 
+}
+.container>a,h1{
+    cursor:pointer;
 }
 .container>p{
-    font-size: 6.5vh;
+    font-size: 5vh;
+    cursor: default;
 }
 
 #logo{
@@ -97,8 +101,89 @@ h1{
 .logo{
     width: fit-content;
     height: 80%;
+    cursor:pointer;
+}
+/*main*/
+.case{
+    height: 50%;
+    width: 25%;
+    background:red;
 }
 
+#c1{
+    background: #FE5F55;
+}
+#c2{
+    background: #D9F7FA;
+}
+#c3{
+    background: #FFE066;
+}
+
+/* Traits en haut et en bas qui bougent */
+.container-t-top{
+    position: absolute;
+    width: 300%;
+    height: 2%;
+    /* background: rgb(28, 28, 28); */
+    top:15%;
+    left:0;
+    display: flex;
+    align-items: center;
+    gap:2%;
+    animation: toRight 50s ease-in-out infinite;
+}
+.container-t-bottom{
+    position: absolute;
+    width: 300%;
+    height: 2%;
+    /* background: rgb(28, 28, 28); */
+    top:82.5%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap:2%;
+    animation: toLeft 50s ease-in-out infinite;
+}
+
+@keyframes toRight{
+    0%, 100%{
+        transform: translate(1%, 0);
+    }
+    50%{
+        transform: translate(-70%, 0);
+    }
+}
+
+@keyframes toLeft {
+    0%, 100%{
+        transform: translate(-1%, 0);
+    }
+    50%{
+        transform: translate(70%, 0);
+    } 
+}
+
+/* .container-t-bottom{
+    top:82.5%;
+    right: 0;
+} */
+
+.t{
+    width: 30%;
+    height: 100%;
+    border-radius: 10em;
+}
+.t1{
+    background: #FE5F55;
+}
+
+.t2{
+    background: #FFE066;
+}
+.t3{
+    background: #D9F7FA;
+}
 /*footer*/
 footer{
     background: #242423;
