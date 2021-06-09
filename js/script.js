@@ -12,7 +12,7 @@ window.addEventListener("scroll", function(){
     violon.style.left = value * 1 +"px";
     violon.style.top = value * -2 + "px";
 
-    page.style.opacity = value * 0.2 + "%";
+    // page.style.opacity = value * 0.2 + "%";
 })
 
 function openInNewTab(url) {
