@@ -1,5 +1,6 @@
 let manette = document.getElementById('manette');
 let violon = document.getElementById('violon');
+let nav = document.querySelector('nav');
 
 window.addEventListener("scroll", function(){
     var value = window.scrollY;
@@ -9,4 +10,6 @@ window.addEventListener("scroll", function(){
 
     violon.style.left = value * 1 +"px";
     violon.style.top = value * -2 + "px";
+
+    nav.style.opacity = value * 0.12 + "%";
 })
