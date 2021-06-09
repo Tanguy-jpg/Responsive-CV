@@ -118,6 +118,7 @@ h1{
     color:#3F403F;
     font-weight: 900;
     font-size: 5vh;
+    cursor: pointer;
 }
 
 #c1{
@@ -131,11 +132,11 @@ h1{
 }
 
 /* Traits en haut et en bas qui bougent */
+/*containers des traits*/
 .container-t-top{
     position: absolute;
     width: 300%;
     height: 2%;
-    /* background: rgb(28, 28, 28); */
     top:15%;
     left:0;
     display: flex;
@@ -147,7 +148,6 @@ h1{
     position: absolute;
     width: 300%;
     height: 2%;
-    /* background: rgb(28, 28, 28); */
     top:82.5%;
     right: 0;
     display: flex;
@@ -155,7 +155,7 @@ h1{
     gap:2%;
     animation: toLeft 50s ease-in-out infinite;
 }
-
+/*Animations */
 @keyframes toRight{
     0%, 100%{
         transform: translate(1%, 0);
@@ -174,11 +174,7 @@ h1{
     } 
 }
 
-/* .container-t-bottom{
-    top:82.5%;
-    right: 0;
-} */
-
+/* traits */
 .t{
     width: 30%;
     height: 100%;
@@ -194,6 +190,7 @@ h1{
 .t3{
     background: #D9F7FA;
 }
+
 /*footer*/
 footer{
     background: #242423;
@@ -206,6 +203,28 @@ footer{
     align-items: center;
     justify-content: center;
     color: #FFE066;
+    cursor: default;
 }
+
+/* ------------------- Responsive ----------------------*/
+
+@media (max-width:1000px){
+    #page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:5vh;
+    }
+
+    .case{
+        height: 13.5%;
+        width: 98%;
+    }
+}
+/* navbar à transformer 
+@media(max-width:800px){
+
+}
+*/
 
 
