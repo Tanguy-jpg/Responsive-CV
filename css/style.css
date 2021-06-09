@@ -5,7 +5,6 @@
 
 body{
     background:#3F403F;
-    min-height: 200vh;
     color:rgb(255, 255, 255);
     font-family: 'Rokkitt', serif;
 }
@@ -169,6 +168,7 @@ h1{
     background:#242423 ;
     opacity: 0%;
     transition: 0.4s;
+    font-size: 3vh;
 }
 
 #c1:hover:before{
@@ -186,6 +186,7 @@ h1{
     background:#242423 ;
     opacity: 0%;
     transition: 0.4s;
+    font-size: 3vh;
 }
 
 #c2:hover:before{
@@ -203,6 +204,7 @@ h1{
     background:#242423 ;
     opacity: 0%;
     transition: 0.4s;
+    font-size: 3vh;
 }
 
 #c3:hover:before{
@@ -304,11 +306,22 @@ footer{
         flex-direction: column;
         justify-content: center;
         gap:5vh;
+        opacity: 100%;
     }
 
     .case{
         height: 13.5%;
         width: 98%;
+    }
+
+    #paralax{
+        display: none;
+    }
+    .container{
+        margin-right: 2vh;
+    }
+    h1{
+        margin-left: 2vh;
     }
 }
 /* navbar à transformer */
@@ -317,13 +330,6 @@ footer{
         display: none;
     }
 
-    footer{
-        font-size:1vh;
-    }
-
-    nav{
-        font-size: 1vh;
-    }
 }
 
 
