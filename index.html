@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="assets/img/logo-tb.png" type="image/x-icon">
 </head>
 <body>
+    <!-- TopPage (Paralax effect)-->
     <section id="paralax">
         <img src="assets/img/para-fox.png" alt="fox" id='fox'>
         <img src="assets/img/para-coding.png" alt="coding" id='coding'>
@@ -23,6 +24,7 @@
         <img src="assets/img/para-tanguy.png" alt="tanguy" id="tanguy">
         <img src="assets/img/para-brunetti.png" alt="brunetti" id="brunetti">
     </section>
+    <!-- MainPage -->
     <section id="page">
         <h2 class="case" id="c1" data-tilt>skills</h2>
         <h3 class="case" id="c2" data-tilt>experience</h3>
@@ -55,8 +57,8 @@
             <img id='logo-tb' src="assets/img/logo-tb.png" alt="logo-tanguy-brunetti">
             <p id='TB' onClick="window.location.reload();">Tanguy Brunetti</p>
             <div class="container">
-                <a>About</a>
-                <a>Contact</a>
+                <a onclick="openModals(about)">About</a>
+                <a href="mailto: tanguy.brunetti@gmail.com">Contact</a>
                 <p>|</p>
                 <div id="logo">
                     <img src="assets/img/logo-github.png" alt="GitHub_Logo" class="logo" id="gitHub" onclick="openInNewTab('https://github.com/Tanguy-jpg');">
@@ -68,6 +70,28 @@
         <footer id="footer">
             <p>html5, css3, javascript | 09/06/21</p>
         </footer>
+
+        <!--Pages to open on click-->
+        <!--About-->
+        <div class="about" id="about" onclick="closeModals(about)">
+            <div id="photo-me" data-tilt></div>
+            <div class="me">
+                <p>Tanguy Brunetti</p>
+                <p>+33 7 66 30 75 89</p>
+                <p>tanguy.brunetti@gmail.com</p>
+                <p>06 400, Cannes</p>
+                <hr>
+                <p> • Musician at the Cannes concervatory</p>
+                <p> • Ex-gamer & future developer</p>
+                <p> • 💛 to learn and understand</p>
+                <hr class='hr2'>
+                <p> • Musicien au concervatoire de Cannes</p>
+                <p> • Ex-gamer & futur développeur</p>
+                <p> • Adore comprendre et apprendre</p>
+                <hr class='hr3'>
+                <p class='close'>CLOSE</p>
+            </div>
+        </div>
     </section>
 </body>
 </html>

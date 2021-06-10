@@ -1,3 +1,4 @@
+// PARALAX EFFECT TOP OF PAGE 
 let bg = document.getElementById('paralax');
 
 let fox = document.getElementById('fox');
@@ -9,13 +10,9 @@ let terre = document.getElementById('terre');
 let tanguy = document.getElementById('tanguy');
 let brunetti = document.getElementById('brunetti');
 
-let nav = document.querySelector('nav');
-let page = document.getElementById('page');
-
 window.addEventListener("scroll", function(){
     var value = window.scrollY;
 
-    // bg.style.filter = "hue-rotate(-" + value * 0.05 + "deg)";
     bg.style.filter = "grayscale( " + value * 0.2 + "%)";
 
     manette.style.left = value * 1 + "px";
@@ -27,13 +24,20 @@ window.addEventListener("scroll", function(){
     terre.style.left = value * -1 + "px";
     ombTerre.style.left = value * -1 + "px";
     fox.style.top = value * 0.1 + "px";
-
-
-
-
-    // page.style.opacity = value * 0.2 + "%";
 })
 
 function openInNewTab(url) {
     window.open(url, '_blank').focus();
+}
+
+
+// OPEN MODALS ON CLICK
+let about = document.getElementById('about')
+
+function openModals(button){
+    button.style.transform = "scale(1)"
+}
+
+function closeModals(button){
+    button.style.transform = "scale(0)"
 }

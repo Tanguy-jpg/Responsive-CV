@@ -138,10 +138,11 @@ nav{
     justify-content: space-around;
     color:var(--dark-grey);
     font-size: 2vh;
+    
 }
 
 #logo-tb{
-    height: 100%;
+    height: 101%;
     background-color:var(--dark-grey);
 }
 #TB{
@@ -160,6 +161,8 @@ nav{
 }
 .container>a,#TB{
     cursor:pointer;
+    text-decoration: none;
+    color: var(--dark-grey);
 }
 .container>p{
     font-size: 5vh;
@@ -359,6 +362,55 @@ footer{
     color: var(--yellow);
     cursor: default;
     font-size: 2vh;
+}
+
+/*------------------------------------- Modale "About"---------------------*/
+#about{
+    position: absolute;
+    background:var(--dark-dark);
+    height: 60%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1vh;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+#photo-me{
+    background-image: url("../assets/img/me.PNG");
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    height: 80%;
+}
+.me{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5vh;
+}
+
+hr {
+    border-color:var(--yellow);
+}
+
+.hr2{
+    border-color:var(--red);
+}
+
+.hr3{
+    border-color:var(--blue);
+}
+
+.close{
+    font-size: 3vh;
+    color: var(--yellow);
+    cursor: pointer;
 }
 
 /* ------------------- Responsive ----------------------*/
