@@ -90,7 +90,7 @@ nav{
     color:#3F403F;
     font-size: 2vh;
 }
-h1{
+#TB{
     min-width: 130px;
     transition: 0.3s;
 }
@@ -104,7 +104,7 @@ h1{
     gap:5vh;
     font-size: 2.5vh; 
 }
-.container>a,h1{
+.container>a,#TB{
     cursor:pointer;
 }
 .container>p{
@@ -317,7 +317,7 @@ footer{
     .container{
         margin-right: 2vh;
     }
-    h1{
+    #TB{
         margin-left: 2vh;
     }
 }
