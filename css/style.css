@@ -4,7 +4,7 @@
 }
 
 body{
-    background:#3F403F;
+    background:#D9F7FA;
     color:rgb(255, 255, 255);
     font-family: 'Rokkitt', serif;
 }
@@ -38,8 +38,8 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(36,36,35);
-    background: linear-gradient(180deg, rgba(36,36,35,1) 36%, rgba(63,64,63,1) 100%); 
+    background: rgb(217,247,250);
+    background: radial-gradient(circle, rgba(217,247,250,1) 0%, rgba(117,186,205,1) 100%);
 }
 
 #paralax img{
@@ -50,7 +50,8 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
     height: 100%;
     object-fit: cover;
 }
-/* Animation levitation */
+/* --------- animations ------*/
+/* Anim levitation */
 @keyframes levitate{
     0%,100%{
         transform: translate(0, 0px);
@@ -59,9 +60,51 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
         transform: translate(0, 20px);
     }
 }
+/*anim ombres*/
+@keyframes ombres{
+    0%,100%{
 
-#manette, #violon{
-    animation: levitate 2s ease-in-out infinite  ;
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+/*anim fox */
+@keyframes fox {
+    0%, 100%{
+        transform: translate(0, 40px);
+    }
+    20%{
+        transform: translate(0, 40px);
+    }
+    50%{
+        transform: translate(0, 10px);
+    }
+    90%{
+        transform: translate(0, 10px);
+    }
+}
+/* anim de 'coding'*/
+@keyframes coding{
+    0%,100%{
+
+    }
+    50%{
+        transform: scale(1.03);
+    }
+}
+/*attribution anim*/
+#fox{
+    animation: fox 5s ease infinite ;
+}
+#manette, #terre{
+    animation: levitate 2s ease-in-out infinite;
+}
+#omb-terre, #omb-manette{
+    animation: ombres 2s ease-in-out infinite;
+}
+#coding{
+    animation: coding 3s ease infinite;
 }
 /* --------------------------------------- PAGE ACCUEIL ------------------------------------ */
 
@@ -166,11 +209,13 @@ nav{
     opacity: 0%;
     transition: 0.4s;
     font-size: 3vh;
+    
 }
 
 #c1:hover:before{
     opacity:100%;
     transition: 0.4s;
+    animation: levitate 2s ease-in-out infinite  ;
 }
 #c2:before{
     content: '404 page not found';
@@ -189,6 +234,7 @@ nav{
 #c2:hover:before{
     opacity:100%;
     transition: 0.4s;
+    animation: levitate 2s ease-in-out infinite  ;
 }
 #c3:before{
     content: 'DWWM, WorldPress, Graphist, WebDesign';
@@ -207,6 +253,7 @@ nav{
 #c3:hover:before{
     opacity:100%;
     transition: 0.4s;
+    animation: levitate 2s ease-in-out infinite  ;
 }
 
 /* Traits en haut et en bas qui bougent */
