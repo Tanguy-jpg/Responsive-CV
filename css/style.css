@@ -139,6 +139,11 @@ nav{
     color:var(--dark-grey);
     font-size: 2vh;
 }
+
+#logo-tb{
+    height: 100%;
+    background-color:var(--dark-grey);
+}
 #TB{
     min-width: 130px;
     transition: 0.3s;
@@ -358,7 +363,7 @@ footer{
 
 /* ------------------- Responsive ----------------------*/
 
-@media (max-width:1000px){
+@media (max-width:1040px){
     #page{
         display: flex;
         flex-direction: column;
