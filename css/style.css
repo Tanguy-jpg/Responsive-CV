@@ -112,6 +112,10 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 #coding{
     animation: coding 3s ease infinite;
 }
+
+h1{
+    display: none;
+}
 /* --------------------------------------- PAGE ACCUEIL ------------------------------------ */
 
 #page{
