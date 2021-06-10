@@ -21,7 +21,6 @@ html{
 }
 body {
 margin: 0; /* remove default margin */
-scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
 -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
 overflow-y: scroll;
 }
@@ -50,7 +49,6 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
     width:100%;
     height: 100%;
     object-fit: cover;
-    pointer-events: none;
 }
 /* Animation levitation */
 @keyframes levitate{
