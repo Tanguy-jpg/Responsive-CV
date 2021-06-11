@@ -31,6 +31,13 @@ function openInNewTab(url) {
     window.open(url, '_blank').focus();
 }
 
+// Scroll top or down
+function toTop(){
+    window.scrollTo(0, 0);
+}
+function toDown(){
+    window.scrollTo(0, 1000);
+}
 
 // OPEN MODALS ON CLICK
 

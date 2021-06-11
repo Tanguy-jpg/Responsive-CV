@@ -24,6 +24,12 @@
         <img src="assets/img/para-terre.png" alt="terre" id="terre">
         <img src="assets/img/para-tanguy.png" alt="tanguy" id="tanguy">
         <img src="assets/img/para-brunetti.png" alt="brunetti" id="brunetti">
+        <!-- arrow -->
+        <div class="arrow" onclick="toDown()">
+            <img src="assets/img/circle-arrow.png" alt="circle" id="circle">
+            <img src="assets/img/red-arrow.png" alt="red-arrow" id="red-arrow">
+            <img src="assets/img/yellow-arrow.png" alt="yellow-arrow" id="yellow-arrow">
+        </div>
     </header>
     <!-- MainPage -->
     <section id="page">
@@ -56,7 +62,7 @@
 
         <nav>
             <img id='logo-tb' src="assets/img/logo-tb.png" alt="logo-tanguy-brunetti">
-            <p id='TB' onClick="window.location.reload();"> <strong> Tanguy Brunetti </strong> </p>
+            <p id='TB' onClick="toTop()"> <strong> Tanguy Brunetti </strong> </p>
             <div class="container">
                 <a onclick="openModals(about)">About</a>
                 <a href="mailto:tanguy.brunetti@gmail.com">Contact</a>
