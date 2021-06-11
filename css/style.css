@@ -459,8 +459,12 @@ hr {
     font-size: 3vh;
     color: var(--yellow);
     cursor: pointer;
+    transition: 0.3s;
 }
-
+.close:hover{
+    background:var(--dark-grey);
+    transition: 0.3s;
+}
 /* ------------------- Responsive ----------------------*/
 
 @media (max-width:1040px){

@@ -25,6 +25,7 @@ window.addEventListener("scroll", function(){
     ombTerre.style.left = value * -1 + "px";
     fox.style.top = value * 0.1 + "px";
 })
+//Open in new tab
 
 function openInNewTab(url) {
     window.open(url, '_blank').focus();
@@ -32,12 +33,11 @@ function openInNewTab(url) {
 
 
 // OPEN MODALS ON CLICK
-let about = document.getElementById('about')
 
-function openModals(button){
-    button.style.transform = "scale(1)"
+function openModals(p){
+    p.style.transform = "scale(1)"
 }
 
-function closeModals(button){
-    button.style.transform = "scale(0)"
+function closeModals(p){
+    p.style.transform = "scale(0)"
 }

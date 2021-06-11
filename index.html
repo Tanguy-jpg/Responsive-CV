@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- TopPage (Paralax effect)-->
-    <section id="paralax">
+    <header id="paralax">
         <h1>Tanguy Brunetti</h1>
         <img src="assets/img/para-fox.png" alt="fox" id='fox'>
         <img src="assets/img/para-coding.png" alt="coding" id='coding'>
@@ -24,7 +24,7 @@
         <img src="assets/img/para-terre.png" alt="terre" id="terre">
         <img src="assets/img/para-tanguy.png" alt="tanguy" id="tanguy">
         <img src="assets/img/para-brunetti.png" alt="brunetti" id="brunetti">
-    </section>
+    </header>
     <!-- MainPage -->
     <section id="page">
         <h2 class="case" id="c1" data-tilt>skills</h2>
@@ -56,7 +56,7 @@
 
         <nav>
             <img id='logo-tb' src="assets/img/logo-tb.png" alt="logo-tanguy-brunetti">
-            <p id='TB' onClick="window.location.reload();">Tanguy Brunetti</p>
+            <p id='TB' onClick="window.location.reload();"> <strong> Tanguy Brunetti </strong> </p>
             <div class="container">
                 <a onclick="openModals(about)">About</a>
                 <a href="mailto:tanguy.brunetti@gmail.com">Contact</a>
@@ -74,7 +74,7 @@
 
         <!--Pages to open on click-->
         <!--About-->
-        <div class="about" id="about" onclick="closeModals(about)">
+        <div class="about" id="about">
             <div id="photo-me" data-tilt></div>
             <div class="me">
                 <p>Tanguy Brunetti</p>
@@ -83,14 +83,14 @@
                 <p>06400, Cannes</p>
                 <hr>
                 <p> • Musician at the Cannes conservatory</p>
-                <p> • Ex-gamer & future developer</p>
+                <p> • Ex-gamer & future <strong>developer</strong></p>
                 <p> • Thirst for learning</p>
                 <hr class='hr2'>
                 <p> • Musicien au conservatoire de Cannes</p>
-                <p> • Ex-gamer & futur développeur</p>
+                <p> • Ex-gamer & futur <strong>développeur</strong></p>
                 <p> • Adore comprendre et apprendre</p>
                 <hr class='hr3'>
-                <p class='close'>CLOSE</p>
+                <p class='close' onclick="closeModals(about)">CLOSE</p>
             </div>
         </div>
     </section>
