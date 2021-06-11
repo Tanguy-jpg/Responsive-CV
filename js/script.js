@@ -24,6 +24,7 @@ window.addEventListener("scroll", function(){
     terre.style.left = value * -1 + "px";
     ombTerre.style.left = value * -1 + "px";
     fox.style.top = value * 0.1 + "px";
+
 })
 //Open in new tab
 
