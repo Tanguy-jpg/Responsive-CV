@@ -63,7 +63,7 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
     width: 10%;
     bottom:10%;
     display: flex;
-    
+    cursor: pointer;
 }
 #paralax div>img{
     object-fit:contain;
@@ -543,6 +543,12 @@ hr {
         display: none;
     }
 
+}
+
+@media (max-width:280px){
+    #logo-tb{
+        display: none;
+    }
 }
 
 
