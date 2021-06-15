@@ -305,7 +305,7 @@ nav{
 }
 
 #c1:before{
-    content: 'HTML5, CSS3, JavaScript, Photoshop, Illustrator, SonyVegasPro, PHP, WorldPress';
+    content: 'HTML5, CSS3, JavaScript, Photoshop, Illustrator, SonyVegasPro, PHP, WordPress';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,7 +344,7 @@ nav{
     animation: levitate 2s ease-in-out infinite  ;
 }
 #c3:before{
-    content: 'DWWM, WorldPress, Graphist, WebDesign';
+    content: 'DWWM, WordPress, Graphist, WebDesign';
     display: flex;
     align-items:center;
     justify-content:flex-start;
