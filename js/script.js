@@ -49,3 +49,54 @@ function openModals(p){
 function closeModals(p){
     p.style.transform = "scale(0)"
 }
+
+// Send Mail
+    
+$(document).ready(function(){
+
+    var form = $('#myForm');
+    form.submit(function(e) {
+        // prevent form submission
+        e.preventDefault();
+
+        // submit the form via Ajax
+        $.ajax({
+            url: form.attr('action'),
+            type: form.attr('method'),
+            dataType: 'html',
+            data: form.serialize(),
+            success: function(result) {
+                $('#form-result').html(result);
+            },
+            complete: function(result) {
+                $('html, body').animate({
+                    scrollTop: $("#form-result").offset().top
+                }, 2000);   
+            }
+        });
+    });
+
+});
+
+//verif
+
+let formName
+let formMail
+let formConfMail
+
+function valider(){
+    formName = document.getElementById("name").value
+    formMail = document.getElementById("email").value
+    formConfMail = document.getElementById("c-email").value
+    
+    if (formMail === formConfMail){
+        alert("merci "+formName+", votre message a bien été envoyé");
+        closeModals(contact);
+        document.getElementById("name").value = ""
+        document.getElementById("email").value = ""
+        document.getElementById("c-email").value = ""
+        document.getElementById("message").value = ""
+    }else{
+        alert("Veuillez vérifier que le Mail et le Mail de confirmation soient identiques");
+    }
+}

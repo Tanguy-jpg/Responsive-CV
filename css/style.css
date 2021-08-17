@@ -5,6 +5,7 @@
 
 :root {
     --dark-dark: #242423;
+    --dark-dark-inv: rgb(36, 36, 36, 0.5);
     --dark-grey: #3F403F;
     --red:#FE5F55;
     --yellow: #FFE066;
@@ -119,7 +120,7 @@ background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
         transform: scale(1.03);
     }
 }
-/*attribution anim*/
+/*attribution animations*/
 #fox{
     animation: fox 5s ease infinite ;
 }
@@ -196,7 +197,14 @@ nav{
 #logo-tb{
     height: 101%;
     background-color:var(--dark-grey);
+    transition: 0.3s;
 }
+#logo-tb:hover{
+    height: 101%;
+    background-color:rgb(54, 54, 54)  ;
+    transition: 0.3s;
+}
+
 #TB{
     min-width: 130px;
     transition: 0.3s;
@@ -233,17 +241,9 @@ nav{
     cursor:pointer;
 }
 /*onhover animations*/
-#TB:before{
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 1%;
-    background:var(--dark-grey);
-    transform: translate(0,3vh);
-    transition: 0.4s;
-}
-#TB:hover:before{
-    width: 8%;
+
+#TB:hover{
+    transform: scale(1.1);
     transition: 0.4s;
 }
 
@@ -262,7 +262,7 @@ nav{
 }
 /*logo*/
 
-/*main*/
+/* -------------main--------------------*/
 .case{
     height: 50%;
     width: 25%;
@@ -305,7 +305,7 @@ nav{
 }
 
 #c1:before{
-    content: 'HTML5, CSS3, JavaScript, Photoshop, Illustrator, SonyVegasPro, PHP, WordPress';
+    content: 'Click to open';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,14 +318,8 @@ nav{
     font-size: 3vh;
     
 }
-
-#c1:hover:before{
-    opacity:100%;
-    transition: 0.4s;
-    animation: levitate 2s ease-in-out infinite  ;
-}
 #c2:before{
-    content: '404 page not found';
+    content: '404 that page does not exist';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,16 +332,11 @@ nav{
     font-size: 3vh;
 }
 
-#c2:hover:before{
-    opacity:100%;
-    transition: 0.4s;
-    animation: levitate 2s ease-in-out infinite  ;
-}
 #c3:before{
-    content: 'DWWM, WordPress, Graphist, WebDesign';
+    content: 'Click to open';
     display: flex;
     align-items:center;
-    justify-content:flex-start;
+    justify-content:center;
     position: absolute;
     height: 90%;
     width:90%;
@@ -357,14 +346,13 @@ nav{
     font-size: 3vh;
 }
 
-#c3:hover:before{
+#c1:hover:before,#c2:hover:before, #c3:hover:before{
     opacity:100%;
     transition: 0.4s;
     animation: levitate 2s ease-in-out infinite  ;
 }
-
 /* Traits en haut et en bas qui bougent */
-/*containers des traits*/
+/*containers des traits*/   
 .container-t-top{
     position: absolute;
     width: 300%;
@@ -481,12 +469,12 @@ footer>p:hover:before{
 }
 .me{
     height: 80%;
-    width: 25%;
+    width: 32%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: white;
-    font-size: 1.5vh;
+    font-size: 2vh;
 }
 
 hr {
@@ -510,6 +498,86 @@ hr {
 .close:hover{
     background:var(--dark-grey);
     transition: 0.3s;
+}
+/*------------------------------------- Modale "Contact"---------------------*/
+#contact{
+    position: absolute;
+    background:var(--dark-dark-inv);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+    transition: 0.5s;
+    transform: scale(0);
+    color: var(--blue);
+}
+
+#contact>form{
+    background: var(--dark-dark);
+    width: 30%;
+    min-width: 320px;
+    height: 70%;
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 2vh;
+    font-size: 3vh;
+}
+#contact>form>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message{
+    justify-content: flex-start;
+    resize: none;
+}
+
+
+/* Button Send */
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+#sub-button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    color: var(--dark-dark);
+    background: white;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 0 var(--red),
+        -5px -5px 0 var(--yellow),
+        -5px 5px 0 var(--red),
+        5px -5px 0 var(--yellow);
+    transition: 500ms ease-in-out;
+    font-family: 'Rokkitt', serif;
+    font-size: 3.5vh;
+    font-weight: 900;
+}
+  
+#sub-button:hover {
+    box-shadow: 20px 5px 0 var(--red), -20px -5px 0 var(--yellow);
+}
+  
+#sub-button:focus {
+    outline: none;
+}
+
+/* button close */
+#contact>p{
+    transform: translateY(-4vh);
 }
 /* ------------------- Responsive ----------------------*/
 
@@ -545,11 +613,22 @@ hr {
 
 }
 
-@media (max-width:280px){
+@media (max-width:375px){
     #logo-tb{
         display: none;
     }
+    .me{
+        font-size: 1.7vh;
+    }
 }
+
+@media (max-width:280px){
+    #logo-tb{
+        display: none;
+        font-size: 1.7vh;
+    }
+}
+
 
 
 

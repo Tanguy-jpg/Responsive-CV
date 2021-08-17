@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TanguyBrunetti - Dev - Curriculum vitae</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap" rel="stylesheet"> 
-    <script src="js/vanilla-tilt.js" defer></script>
     <link rel="shortcut icon" href="assets/img/logo-tb.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS  -->
+    <script src="js/script.js" defer></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap" rel="stylesheet">
+    <!-- Library -->
+    <script src="js/vanilla-tilt.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <!-- TopPage (Paralax effect)-->
     <header id="paralax">
@@ -33,10 +42,12 @@
     </header>
     <!-- MainPage -->
     <section id="page">
-        <h2 class="case" id="c1" data-tilt>skills</h2>
-        <h3 class="case" id="c2" data-tilt>experience</h3>
-        <h4 class="case" id="c3" data-tilt>education</h4>
+        <!-- cases red/blue/yellow -->
+        <h2 class="case" id="c1" data-tilt>Skill Highlights</h2>
+        <h3 class="case" id="c2" data-tilt>Experience</h3>
+        <h4 class="case" id="c3" data-tilt>Education</h4>
 
+        <!-- lines animation -->
         <div class="container-t-top">
             <div class="t t1"></div>
             <div class="t t2"></div>
@@ -61,16 +72,18 @@
         </div>
 
         <nav>
-            <img id='logo-tb' src="assets/img/logo-tb.png" alt="logo-tanguy-brunetti">
+            <img id='logo-tb' onClick="toTop()" src="assets/img/logo-tb.png" alt="logo-tanguy-brunetti">
             <p id='TB' onClick="toTop()"> <strong> Tanguy Brunetti </strong> </p>
             <div class="container">
                 <a onclick="openModals(about)">About</a>
-                <a href="mailto:tanguy.brunetti@gmail.com">Contact</a>
+                <a onclick="openModals(contact)">Contact</a>
                 <p>|</p>
-                <div id="logo">
-                    <img src="assets/img/logo-github.png" alt="GitHub_Logo" class="logo" id="gitHub" onclick="openInNewTab('https://github.com/Tanguy-jpg');">
-                    <img src="assets/img/logo-insta.png" alt="Instagram_Logo" class="logo" onclick="openInNewTab('https://www.instagram.com/tanguybrunetti/?hl=fr');">
-                </div>
+                <div id='logo'>
+                    <img src=" assets/img/logo-github.png" alt="GitHub_Logo" class="logo" id="gitHub"
+                    onclick="openInNewTab('https://github.com/Tanguy-jpg');">
+                    <img src="assets/img/logo-insta.png" alt="Instagram_Logo" class="logo"
+                        onclick="openInNewTab('https://www.instagram.com/tanguybrunetti/?hl=fr');">
+            </div>
             </div>
         </nav>
 
@@ -94,10 +107,38 @@
                 <hr class='hr2'>
                 <p> • Musicien au conservatoire de Cannes</p>
                 <p> • Ex-gamer & futur <strong>développeur</strong></p>
-                <p> • Adore comprendre et apprendre</p>
+                <p> • Soif de connaissance</p>
                 <hr class='hr3'>
                 <p class='close' onclick="closeModals(about)">CLOSE</p>
             </div>
+        </div>
+        <!-- Contact -->
+        <div class="contact" id="contact">
+            <form id="myForm" action="php/process.php" method="post" onsubmit="valider()">
+                <div>
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="c-email">confirm email</label>
+                    <input type="email" name="c-email" id="c-email" required>
+                </div>
+
+                <div>
+                    <label for="message">message</label>
+                    <textarea id="message" name="message" rows="16" cols="40" required></textarea>
+                </div>
+
+                <input type="submit" value="Send" id="sub-button">
+
+                <p class='close' onclick="closeModals(contact)">CLOSE</p>
+            </form>
+            <div id="form-result"></div>
         </div>
     </section>
 </body>
